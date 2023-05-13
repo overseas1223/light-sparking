@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'fade/fade.dart';
+import 'spark/spark.dart';
 
 class AnimationPage extends StatefulWidget {
   const AnimationPage({super.key});
@@ -19,6 +20,7 @@ class _AnimationPageState extends State<AnimationPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Sparkler(),
             SizedBox(
               height: 250,
             ),

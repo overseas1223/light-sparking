@@ -58,8 +58,10 @@ class _FadeInOutTextState extends State<FadeInOutText>
         child: Text(
           texts[index],
           style: const TextStyle(
-              fontSize: 24,
-              color: Colors.white
+              fontSize: 35,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'roboto'
           ),
         ),
       ),
