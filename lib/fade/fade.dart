@@ -28,22 +28,23 @@ class _FadeInOutTextState extends State<FadeInOutText>
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           Timer(const Duration(seconds: 17), () {
+            print("finisehd");
             _controller.reverse();
           });
         } else if (status == AnimationStatus.dismissed) {
-          if (index == 7) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const MyHomePage()),
-            );
-          } else {
-            setState(() {
-              index = index + 1;
-            });
-            Timer(const Duration(seconds: 5), () {
+          Timer(const Duration(seconds: 5), () {
+            if (index == 7) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MyHomePage()),
+              );
+            } else {
+              setState(() {
+                index = index + 1;
+              });
               _controller.forward();
-            });
-          }
+            }
+          });
         }
       });
     _controller.forward();
