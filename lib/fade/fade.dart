@@ -28,7 +28,6 @@ class _FadeInOutTextState extends State<FadeInOutText>
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           Timer(const Duration(seconds: 17), () {
-            print("finisehd");
             _controller.reverse();
           });
         } else if (status == AnimationStatus.dismissed) {
