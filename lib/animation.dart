@@ -14,17 +14,22 @@ class _AnimationPageState extends State<AnimationPage> {
   @override
   Widget build(BuildContext context) {
 
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Sparkler(),
-            SizedBox(
-              height: 250,
+            // Sparkler(),
+            Image.asset(
+              'assets/image/star.gif',
+              width: 400.0,
+              height: 500.0,
             ),
-            FadeInOutText()
+            const SizedBox(
+              height: 100,
+            ),
+            const FadeInOutText()
           ],
         ),
       ),
